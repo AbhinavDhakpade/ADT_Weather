@@ -18,6 +18,7 @@ x-backend-env: &backend-env
   OPEN_METEO_FORECAST_URL: ${OPEN_METEO_FORECAST_URL:-}   # optional; empty = public Open-Meteo
   OPEN_METEO_ARCHIVE_URL: ${OPEN_METEO_ARCHIVE_URL:-}
   OPEN_METEO_TIMEOUT_SECONDS: ${OPEN_METEO_TIMEOUT_SECONDS:-}
+  OPEN_METEO_API_KEY: ${OPEN_METEO_API_KEY:-}
 
 services:
   db:
