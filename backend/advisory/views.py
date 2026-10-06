@@ -29,7 +29,7 @@ from .models import (
     Treatment,
 )
 from .history import HISTORY_RANGES, csv_bytes, history_rows, xlsx_bytes
-from .kml_import import ImportResult, import_kml, _free_username, _new_password
+from .kml_import import ImportResult, import_kml_file, _free_username, _new_password
 from .serializers import (
     ActualWeatherReadingSerializer,
     AlertSerializer,
@@ -569,7 +569,7 @@ def add_farmers_from_kml(request):
         if not upload.name.lower().endswith(".kml"):
             results.append(ImportResult(upload.name, "error", "Not a .kml file."))
             continue
-        results.append(import_kml(upload, upload.name))
+        results.extend(import_kml_file(upload, upload.name))
 
     counts = {"created": 0, "added": 0, "exists": 0, "error": 0}
     for r in results:

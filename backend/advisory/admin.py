@@ -10,7 +10,7 @@ from django.template.response import TemplateResponse
 from django.urls import path
 
 from .forms import ManualFarmerForm
-from .kml_import import ImportResult, import_kml, _free_username, _new_password
+from .kml_import import ImportResult, import_kml_file, _free_username, _new_password
 
 
 from .kml_import import ImportResult, import_kml
@@ -159,7 +159,7 @@ class FarmProfileAdmin(admin.ModelAdmin):
                 if not upload.name.lower().endswith(".kml"):
                     results.append(ImportResult(upload.name, "error", "Not a .kml file."))
                     continue
-                results.append(import_kml(upload, upload.name))
+                    results.extend(import_kml_file(upload, upload.name))
 
             counts = {"created": 0, "added": 0, "exists": 0, "error": 0}
             for r in results:

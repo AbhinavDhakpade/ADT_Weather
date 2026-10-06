@@ -25,7 +25,9 @@ Wind definition (important for ET0, which wants wind at 2 m):
   - history rows : daily MEAN of hourly 10 m wind, scaled to 2 m (FAO-56 Eq. 47).
   - forecast rows: daily MAX at 10 m (unchanged from before the provider migration).
 
-Configuration (all optional; no API key is needed for these endpoints):
+Configuration (all optional; the free servers need no API key):
+  OPEN_METEO_API_KEY   a purchased commercial key: requests then go to Open-Meteo's
+                       customer servers and carry the key as the `apikey` parameter
   OPEN_METEO_FORECAST_URL, OPEN_METEO_ARCHIVE_URL, OPEN_METEO_TIMEOUT_SECONDS
 """
 
@@ -36,16 +38,30 @@ import logging
 import math
 import os
 from dataclasses import dataclass
+from urllib.parse import quote
 
 import requests
 
 logger = logging.getLogger("advisory.weather")
 
-# An empty value (e.g. passed through docker-compose as "") counts as "not set".
-OPEN_METEO_URL = os.environ.get("OPEN_METEO_FORECAST_URL") or "https://api.open-meteo.com/v1/forecast"
-OPEN_METEO_ARCHIVE_URL = (
-    os.environ.get("OPEN_METEO_ARCHIVE_URL") or "https://archive-api.open-meteo.com/v1/archive"
+# Optional commercial subscription key. It is read only from the environment (.env), never
+# stored in code. With a key set, the default servers are Open-Meteo's dedicated customer ones.
+OPEN_METEO_API_KEY = (os.environ.get("OPEN_METEO_API_KEY") or "").strip()
+
+_DEFAULT_FORECAST_URL = (
+    "https://customer-api.open-meteo.com/v1/forecast"
+    if OPEN_METEO_API_KEY
+    else "https://api.open-meteo.com/v1/forecast"
 )
+_DEFAULT_ARCHIVE_URL = (
+    "https://customer-archive-api.open-meteo.com/v1/archive"
+    if OPEN_METEO_API_KEY
+    else "https://archive-api.open-meteo.com/v1/archive"
+)
+
+# An empty value (e.g. passed through docker-compose as "") counts as "not set".
+OPEN_METEO_URL = os.environ.get("OPEN_METEO_FORECAST_URL") or _DEFAULT_FORECAST_URL
+OPEN_METEO_ARCHIVE_URL = os.environ.get("OPEN_METEO_ARCHIVE_URL") or _DEFAULT_ARCHIVE_URL
 
 REQUEST_TIMEOUT = float(os.environ.get("OPEN_METEO_TIMEOUT_SECONDS") or "15")  # seconds
 
@@ -106,10 +122,18 @@ def _validate_coordinates(lat: float, lon: float) -> None:
 
 def _get_json(url: str, params: dict, what: str) -> dict:
     """GET + JSON decode with uniform error handling. Raises WeatherServiceError."""
+    if OPEN_METEO_API_KEY:
+        params = {**params, "apikey": OPEN_METEO_API_KEY}
     try:
         resp = requests.get(url, params=params, timeout=REQUEST_TIMEOUT)
     except requests.RequestException as exc:
-        raise WeatherServiceError(f"Open-Meteo {what} request failed: {exc}") from exc
+        # A network error message contains the full URL, and so the key. Error messages are
+        # saved in the scheduler log and shown on the dashboard, so the key must never be in them.
+        message = str(exc)
+        if OPEN_METEO_API_KEY:
+            for secret in (OPEN_METEO_API_KEY, quote(OPEN_METEO_API_KEY, safe="")):
+                message = message.replace(secret, "***")
+        raise WeatherServiceError(f"Open-Meteo {what} request failed: {message}") from None
 
     if resp.status_code >= 400:
         # Open-Meteo explains 4xx errors as {"error": true, "reason": "..."}.
