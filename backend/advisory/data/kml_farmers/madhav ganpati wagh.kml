@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>madhav ganpati wagh.kml</name>
+	<StyleMap id="__managed_style_0BD4EE16693C1E7818B6">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1598106D7A3C1E7818B6</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_20CF709AF93C1E7818B6</styleUrl>
+		</Pair>
+	</StyleMap>
+	<gx:CascadingStyle kml:id="__managed_style_1598106D7A3C1E7818B6">
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>1.1376</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_20CF709AF93C1E7818B6">
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>1.7064</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<Placemark id="58BE18C73D000003">
+		<name>madhav ganpati wagh</name>
+		<LookAt>
+			<longitude>77.19858936982133</longitude>
+			<latitude>19.14277391114279</latitude>
+			<altitude>402.8233777740911</altitude>
+			<heading>265.4355122139063</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>591.6983845196229</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0BD4EE16693C1E7818B6</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						77.1985877706161,19.14277647512633,0 77.19744155620957,19.14274696236851,0 77.19744416988891,19.14246428746955,0 77.19857291960274,19.14246654472515,0 77.1985877706161,19.14277647512633,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+		<atom:link rel="app" href="https://www.google.com/earth/about/versions/#earth-pro" title="Google Earth Pro 7.3.7.1155"></atom:link>
+	</Placemark>
+</Document>
+</kml>

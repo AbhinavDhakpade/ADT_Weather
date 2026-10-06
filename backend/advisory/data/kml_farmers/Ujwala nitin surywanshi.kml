@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Ujwala nitin surywanshi.kml</name>
+	<StyleMap id="__managed_style_0E336454EC3C1E7818A4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_14828E691E3C1E7818A4</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2D3B63DA7C3C1E7818A4</styleUrl>
+		</Pair>
+	</StyleMap>
+	<gx:CascadingStyle kml:id="__managed_style_14828E691E3C1E7818A4">
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>0.3568</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_2D3B63DA7C3C1E7818A4">
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>0.5352</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<Placemark id="5893B8EACB0000AB">
+		<name>Ujwala nitin surywanshi</name>
+		<LookAt>
+			<longitude>77.19980174474013</longitude>
+			<latitude>19.14267264974127</latitude>
+			<altitude>401.1860204380027</altitude>
+			<heading>79.60913676915368</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>707.9716857302265</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0E336454EC3C1E7818A4</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						77.1997964720218,19.14267187915173,0 77.20034737148366,19.14273398736519,0 77.20021971497343,19.14408697651171,0 77.19977455375515,19.14395504223877,0 77.1997964720218,19.14267187915173,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+		<atom:link rel="app" href="https://www.google.com/earth/about/versions/#earth-pro" title="Google Earth Pro 7.3.7.1155"></atom:link>
+	</Placemark>
+</Document>
+</kml>

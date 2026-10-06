@@ -1,0 +1,83 @@
+{% extends "admin/base_site.html" %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+  <a href="{% url 'admin:index' %}">Home</a> &rsaquo;
+  <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a> &rsaquo;
+  <a href="{% url 'admin:advisory_farmprofile_changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a> &rsaquo;
+  Import KML files
+</div>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+
+{% if error %}<p class="errornote">{{ error }}</p>{% endif %}
+
+{% if results %}
+  <p>
+    <strong>{{ counts.created }}</strong> new farmer(s),
+    <strong>{{ counts.added }}</strong> extra farm(s) for existing farmers,
+    <strong>{{ counts.exists }}</strong> already present,
+    <strong>{{ counts.error }}</strong> error(s).
+  </p>
+
+  <table style="width:100%">
+    <thead>
+      <tr><th>File</th><th>Result</th><th>Details</th></tr>
+    </thead>
+    <tbody>
+      {% for r in results %}
+      <tr>
+        <td>{{ r.filename }}</td>
+        <td>
+          {% if r.status == "created" %}<strong style="color:#2e7d32">New farmer</strong>
+          {% elif r.status == "added" %}<strong style="color:#2e7d32">New farm</strong>
+          {% elif r.status == "exists" %}<strong style="color:#b26a00">Already present</strong>
+          {% else %}<strong style="color:#c62828">Error</strong>{% endif %}
+        </td>
+        <td>{{ r.message }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {% if credentials %}
+    <h2 style="margin-top:24px">New logins (shown only once)</h2>
+    <p class="help">Passwords are stored hashed and cannot be shown again. Download or copy them now.</p>
+    <table style="width:100%">
+      <thead><tr><th>Farmer</th><th>Username</th><th>Password</th><th>Farm</th></tr></thead>
+      <tbody>
+        {% for r in credentials %}
+        <tr>
+          <td>{{ r.farmer_name }}</td>
+          <td><code>{{ r.username }}</code></td>
+          <td><code>{{ r.password }}</code></td>
+          <td>#{{ r.farm_id }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p style="margin-top:12px">
+      <a class="button" href="{{ csv_href }}" download="agriaura-new-logins.csv">Download credentials (CSV)</a>
+    </p>
+  {% endif %}
+
+  <p style="margin-top:24px"><a href="{% url 'admin:advisory_farmprofile_import_kml' %}">Import more files</a>
+    &middot; <a href="{% url 'admin:advisory_farmprofile_changelist' %}">Back to farm profiles</a></p>
+
+{% else %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p>
+      Choose one or more KML files (one field boundary per file, exported from Google Earth Pro).
+      A new farmer gets a farm and a login. A farmer who already exists is reported, and a new field of
+      a known farmer is added to their existing login.
+    </p>
+    <p><input type="file" name="kml_files" accept=".kml" multiple required></p>
+    <p><input type="submit" value="Import" class="default"></p>
+  </form>
+{% endif %}
+
+</div>
+{% endblock %}

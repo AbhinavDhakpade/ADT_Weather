@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Navnath Trymbak Dakhore.kml</name>
+	<StyleMap id="__managed_style_00483FD77C3C1E7818A8">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_11E65360443C1E7818A8</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_232A1A68113C1E7818A8</styleUrl>
+		</Pair>
+	</StyleMap>
+	<gx:CascadingStyle kml:id="__managed_style_11E65360443C1E7818A8">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.1.0.0/none_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>0.3344</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_232A1A68113C1E7818A8">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.1.0.0/none_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>0.5016</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<Placemark id="5893B8EACB0000BE">
+		<name>Navnath Trymbak Dakhore</name>
+		<LookAt>
+			<longitude>77.11955774992565</longitude>
+			<latitude>19.21797140212957</latitude>
+			<altitude>418.3190066564339</altitude>
+			<heading>358.6834229518723</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>568.7256751381939</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_00483FD77C3C1E7818A8</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						77.12032732004786,19.21803801298284,0 77.12024239225616,19.21901397786538,0 77.119382310554,19.21903290849743,0 77.11942784053009,19.21810218141493,0 77.11954995955033,19.21809823919887,0 77.11953199524456,19.21798481483361,0 77.12032732004786,19.21803801298284,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+		<atom:link rel="app" href="https://www.google.com/earth/about/versions/#earth-pro" title="Google Earth Pro 7.3.7.1155"></atom:link>
+	</Placemark>
+</Document>
+</kml>

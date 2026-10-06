@@ -1,0 +1,66 @@
+{% extends "admin/base_site.html" %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+  <a href="{% url 'admin:index' %}">Home</a> &rsaquo;
+  <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a> &rsaquo;
+  <a href="{% url 'admin:advisory_farmprofile_changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a> &rsaquo;
+  <a href="{% url 'admin:advisory_farmprofile_add_farmer' %}">Add farmer</a> &rsaquo;
+  Add manually
+</div>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+
+{% if created %}
+  <p><strong>Farmer added.</strong> {{ created.farmer_name }} now has farm #{{ created.farm_id }}.</p>
+
+  <h2 style="margin-top:20px">Login (shown only once)</h2>
+  <p class="help">The password is stored hashed and cannot be shown again. Copy it now.</p>
+  <table>
+    <thead><tr><th>Farmer</th><th>Username</th><th>Password</th><th>Farm</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>{{ created.farmer_name }}</td>
+        <td><code>{{ created.username }}</code></td>
+        <td><code>{{ created.password }}</code></td>
+        <td>#{{ created.farm_id }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="margin-top:24px">
+    <a href="{% url 'admin:advisory_farmprofile_add_manual' %}">Add another farmer</a>
+    &middot; <a href="{% url 'admin:advisory_farmprofile_changelist' %}">Back to farm profiles</a>
+  </p>
+
+{% else %}
+  <form method="post">
+    {% csrf_token %}
+
+    {% if form.errors %}
+      <p class="errornote">Please correct the errors below.</p>
+    {% endif %}
+
+    <fieldset class="module aligned">
+      {% for field in form %}
+        <div class="form-row{% if field.errors %} errors{% endif %}">
+          {{ field.errors }}
+          <div>
+            {{ field.label_tag }}
+            {{ field }}
+            {% if field.help_text %}<div class="help">{{ field.help_text }}</div>{% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </fieldset>
+
+    <div class="submit-row">
+      <input type="submit" value="Add farmer" class="default">
+    </div>
+  </form>
+{% endif %}
+
+</div>
+{% endblock %}

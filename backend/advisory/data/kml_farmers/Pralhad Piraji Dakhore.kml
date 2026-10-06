@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Pralhad Piraji Dakhore.kml</name>
+	<StyleMap id="__managed_style_00483FD77C3C1E7818A8">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_11E65360443C1E7818A8</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_232A1A68113C1E7818A8</styleUrl>
+		</Pair>
+	</StyleMap>
+	<gx:CascadingStyle kml:id="__managed_style_11E65360443C1E7818A8">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.1.0.0/none_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>0.3344</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_232A1A68113C1E7818A8">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.1.0.0/none_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>0.5016</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<Placemark id="5893B8EACB0000C4">
+		<name>Pralhad Piraji Dakhore</name>
+		<LookAt>
+			<longitude>77.12627177838537</longitude>
+			<latitude>19.20109842435413</latitude>
+			<altitude>404.5615501075134</altitude>
+			<heading>97.91333340356704</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>584.1323353398184</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_00483FD77C3C1E7818A8</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						77.1263726808906,19.20080889562252,0 77.12687215536764,19.20094153164342,0 77.12694317169641,19.20043007269665,0 77.12728102037816,19.20063780990571,0 77.12722539572984,19.20088875397167,0 77.12687021012012,19.20115195029707,0 77.12629471418541,19.20109436409487,0 77.1263726808906,19.20080889562252,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+		<atom:link rel="app" href="https://www.google.com/earth/about/versions/#earth-pro" title="Google Earth Pro 7.3.7.1155"></atom:link>
+	</Placemark>
+</Document>
+</kml>

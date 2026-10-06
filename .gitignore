@@ -1,0 +1,31 @@
+# Python / Django
+backend/venv/
+.venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/db.sqlite3
+backend/db.sqlite3-*
+backend/*.pyc
+backend/.env
+
+# Node / React
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+
+# Editors / OS
+.DS_Store
+.vscode/
+.idea/
+*.log
+# Deployment / generated
+.env
+backups/
+exchange/*
+!exchange/.gitkeep
+backend/staticfiles/
+backend/validation_reports/
+validation_reports/
+
+# Local AI tool files
+.claude/

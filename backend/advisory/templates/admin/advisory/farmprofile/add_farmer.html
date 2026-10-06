@@ -1,0 +1,32 @@
+{% extends "admin/base_site.html" %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+  <a href="{% url 'admin:index' %}">Home</a> &rsaquo;
+  <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a> &rsaquo;
+  <a href="{% url 'admin:advisory_farmprofile_changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a> &rsaquo;
+  Add farmer
+</div>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+  <p>How do you want to add the farmer?</p>
+
+  <div style="display:flex; gap:20px; flex-wrap:wrap; margin-top:16px;">
+
+    <a href="{% url 'admin:advisory_farmprofile_import_kml' %}"
+       style="display:block; width:260px; padding:24px; border:1px solid #ccc; border-radius:8px; text-decoration:none; color:inherit;">
+      <h2 style="margin:0 0 8px 0;">Add KML files</h2>
+      <p style="margin:0; color:#666;">Upload one or more KML field boundaries. Farmers and logins are created automatically.</p>
+    </a>
+
+    <a href="{% url 'admin:advisory_farmprofile_add_manual' %}"
+       style="display:block; width:260px; padding:24px; border:1px solid #ccc; border-radius:8px; text-decoration:none; color:inherit;">
+      <h2 style="margin:0 0 8px 0;">Add manually</h2>
+      <p style="margin:0; color:#666;">Type in the farmer's details yourself and create a login for them.</p>
+    </a>
+
+  </div>
+</div>
+{% endblock %}

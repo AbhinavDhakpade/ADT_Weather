@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Kalpanabai Subhasrao Wagh.kml</name>
+	<StyleMap id="__managed_style_0AC44050CA3C1E7818AC">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1E1FEBF2B03C1E7818AC</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2CF62D9F273C1E7818AC</styleUrl>
+		</Pair>
+	</StyleMap>
+	<gx:CascadingStyle kml:id="__managed_style_1E1FEBF2B03C1E7818AC">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.1.0.0/none_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>0.3648</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_2CF62D9F273C1E7818AC">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.1.0.0/none_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>0.5472</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<Placemark id="5893B8EACB0000B1">
+		<name>Kalpanabai Subhasrao Wagh</name>
+		<LookAt>
+			<longitude>77.20357376275187</longitude>
+			<latitude>19.15044064047868</latitude>
+			<altitude>400.4179238249206</altitude>
+			<heading>300.2568110793769</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>722.7267772586493</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0AC44050CA3C1E7818AC</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						77.20381751620363,19.15161775782915,0 77.20299556175353,19.15177523047583,0 77.20286648273893,19.15077490030122,0 77.2035748805564,19.15043667642741,0 77.20381751620363,19.15161775782915,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+		<atom:link rel="app" href="https://www.google.com/earth/about/versions/#earth-pro" title="Google Earth Pro 7.3.7.1155"></atom:link>
+	</Placemark>
+</Document>
+</kml>

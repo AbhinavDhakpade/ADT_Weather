@@ -1,0 +1,8 @@
+{% extends "admin/change_list.html" %}
+
+{% block object-tools-items %}
+  {% if perms.advisory.add_farmprofile and perms.auth.add_user %}
+    <li><a href="{% url 'admin:advisory_farmprofile_add_farmer' %}" class="addlink">Add farmer</a></li>
+  {% endif %}
+  {{ block.super }}
+{% endblock %}

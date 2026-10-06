@@ -1,0 +1,22 @@
+{
+  "fungal": {
+    "accuracy": 0.9233,
+    "roc_auc": 0.9777
+  },
+  "bacterial": {
+    "accuracy": 0.8175,
+    "roc_auc": 0.8953
+  },
+  "viral": {
+    "accuracy": 0.8467,
+    "roc_auc": 0.9235
+  },
+  "phytoplasma": {
+    "accuracy": 0.8525,
+    "roc_auc": 0.9328
+  },
+  "pest": {
+    "accuracy": 0.875,
+    "roc_auc": 0.9422
+  }
+}
