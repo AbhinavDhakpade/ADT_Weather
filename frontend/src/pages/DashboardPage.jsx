@@ -42,7 +42,7 @@ export default function DashboardPage() {
       {/* MODE BANNER — explains what farmer/expert mode actually changes */}
       <div className="mode-banner">
         <span className="mode-banner-icon">{isExpert ? "🔬" : "🌾"}</span>
-        <span>("mode.expertDesc") : t("mode.farmerDesc")</span>
+                <span>{isExpert ? t("mode.expertDesc") : t("mode.farmerDesc")}</span>
       </div>
 
       {/* ALERTS — always first thing the farmer sees */}
